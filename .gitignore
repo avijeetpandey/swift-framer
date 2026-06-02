@@ -1,5 +1,6 @@
 # Xcode
 *.xcodeproj/
+!Example/FramerSwiftExample.xcodeproj/
 *.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 *.xcuserstate
