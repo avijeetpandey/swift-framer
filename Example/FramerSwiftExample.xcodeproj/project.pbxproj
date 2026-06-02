@@ -15,6 +15,9 @@
 		AA000000000000000000001C /* DraggableCardsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000001D /* DraggableCardsDemo.swift */; };
 		AA000000000000000000001E /* ModalDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000000000000000000001F /* ModalDemo.swift */; };
 		AA0000000000000000000020 /* LoopingAnimationsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000021 /* LoopingAnimationsDemo.swift */; };
+		AA0000000000000000000030 /* ScrollLayoutDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000031 /* ScrollLayoutDemo.swift */; };
+		AA0000000000000000000032 /* TextEffectsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000033 /* TextEffectsDemo.swift */; };
+		AA0000000000000000000034 /* CarouselTickerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000035 /* CarouselTickerDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		AA000000000000000000001D /* DraggableCardsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableCardsDemo.swift; sourceTree = "<group>"; };
 		AA000000000000000000001F /* ModalDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDemo.swift; sourceTree = "<group>"; };
 		AA0000000000000000000021 /* LoopingAnimationsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopingAnimationsDemo.swift; sourceTree = "<group>"; };
+		AA0000000000000000000031 /* ScrollLayoutDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollLayoutDemo.swift; sourceTree = "<group>"; };
+		AA0000000000000000000033 /* TextEffectsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEffectsDemo.swift; sourceTree = "<group>"; };
+		AA0000000000000000000035 /* CarouselTickerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTickerDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,9 @@
 				AA000000000000000000001D /* DraggableCardsDemo.swift */,
 				AA000000000000000000001F /* ModalDemo.swift */,
 				AA0000000000000000000021 /* LoopingAnimationsDemo.swift */,
+				AA0000000000000000000031 /* ScrollLayoutDemo.swift */,
+				AA0000000000000000000033 /* TextEffectsDemo.swift */,
+				AA0000000000000000000035 /* CarouselTickerDemo.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -167,6 +176,9 @@
 				AA000000000000000000001C /* DraggableCardsDemo.swift in Sources */,
 				AA000000000000000000001E /* ModalDemo.swift in Sources */,
 				AA0000000000000000000020 /* LoopingAnimationsDemo.swift in Sources */,
+				AA0000000000000000000030 /* ScrollLayoutDemo.swift in Sources */,
+				AA0000000000000000000032 /* TextEffectsDemo.swift in Sources */,
+				AA0000000000000000000034 /* CarouselTickerDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

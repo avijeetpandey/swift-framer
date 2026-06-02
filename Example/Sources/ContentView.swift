@@ -12,28 +12,41 @@ struct ContentView: View {
         case cards   = "Cards"
         case modal   = "Modal"
         case loops   = "Loops"
+        case scroll  = "Scroll"
+        case text    = "Text"
+        case carousel = "Carousel"
     }
 
     var body: some View {
         NavigationView {
             VStack(spacing: 0) {
-                Picker("Section", selection: $selectedTab) {
-                    ForEach(Tab.allCases, id: \.self) { tab in
-                        Text(tab.rawValue).tag(tab)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(Tab.allCases, id: \.self) { tab in
+                            TabChip(
+                                title: tab.rawValue,
+                                isSelected: selectedTab == tab
+                            ) {
+                                selectedTab = tab
+                            }
+                        }
                     }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 10)
                 }
-                .pickerStyle(.segmented)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 10)
 
                 ScrollView {
                     switch selectedTab {
-                    case .list:  StaggerListDemo()
-                    case .cards: DraggableCardsDemo()
-                    case .modal: ModalDemo(showModal: $showModal)
-                    case .loops: LoopingAnimationsDemo()
+                    case .list:     StaggerListDemo()
+                    case .cards:    DraggableCardsDemo()
+                    case .modal:    ModalDemo(showModal: $showModal)
+                    case .loops:    LoopingAnimationsDemo()
+                    case .scroll:   ScrollLayoutDemo()
+                    case .text:     TextEffectsDemo()
+                    case .carousel: CarouselTickerDemo()
                     }
                 }
+                .coordinateSpace(name: "appScroll")
                 .animation(.easeInOut(duration: 0.2), value: selectedTab)
             }
             .navigationTitle("framer-swift")
@@ -45,6 +58,28 @@ struct ContentView: View {
                 ModalOverlay(isPresented: $showModal)
             }
         }
+    }
+}
+
+// MARK: - TabChip
+
+struct TabChip: View {
+    let title: String
+    let isSelected: Bool
+    let action: () -> Void
+
+    var body: some View {
+        Text(title)
+            .font(.subheadline.weight(.semibold))
+            .foregroundStyle(isSelected ? Color.white : Color.primary)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 8)
+            .background(
+                Capsule()
+                    .fill(isSelected ? Color.accentColor : Color.secondary.opacity(0.15))
+            )
+            .contentShape(Capsule())
+            .whileTap([.scale(0.94)], inactive: [.scale(1)], action: action)
     }
 }
 
